@@ -1,226 +1,228 @@
-        .custom-controls-container {
-            position: absolute;
-            bottom: 90px;
-            right: 20px;
-            display: flex;
-            flex-direction: column;
-            gap: 5px;
-            background: rgb(31, 31, 35);
-            filter: drop-shadow(1px 1px 0.5px #000);
-            padding: 10px;
-            border-radius: 0.4rem;
-            transition: opacity 0.2s ease;
-            opacity: 0;
-            pointer-events: none;
-            z-index: 9999;
-        }
-        .custom-controls-container.visible {
-            opacity: 1;
-            pointer-events: all;
-        }
-        .custom-controls-container.visible:not(:hover) {
-            opacity: 0.3;
-        }
-        .zoom-controls, .move-controls {
-            display: flex;
-            justify-content: center;
-            gap: 5px;
-        }
-        .custom-btn {
-            background-color: var(--color-background-button-primary-default);
-            color: white;
-            border: none;
-            border-radius: 0.4rem;
-            padding: 5px 10px;
-            cursor: pointer;
-            font-size: 14px;
-            width: 30px;
-            height: 30px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .custom-btn:hover {
-            background-color: var(--color-background-button-primary-hover);
-        }
-        .move-up, .move-down {
-            margin: 0 auto;
-        }
-        .close-btn {
-            position: absolute;
-            top: 2px;
-            right: 2px;
-            background: transparent;
-            color: white;
-            border: none;
-            font-size: 17px;
-            border-radius: 0.4rem;
-            cursor: pointer;
-            width: 17px;
-            height: 17px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .close-btn:hover {
-            background-color: rgba(83, 83, 95, 0.48);
-        }
-        .show-controls-btn {
-            position: absolute;
-            bottom: 90px;
-            right: 20px;
-            background-color: var(--color-background-button-primary-default);
-            color: white;
-            border: none;
-            border-radius: 0.4rem;
-            padding: 5px 10px;
-            cursor: pointer;
-            opacity: 0;
-            font-size: 12px;
-            font-weight: var(--font-weight-semibold);
-            filter: drop-shadow(1px 1px 0.5px #000);
-            transition: opacity 0.2s ease;
-            z-index: 9998;
-        }
-        .show-controls-btn:hover {
-            background-color: var(--color-background-button-primary-hover);
-        }
-        .video-player:hover .show-controls-btn {
-            opacity: 1;
-        }
-        .video-player video {
-            transition: transform 0.3s ease !important;
-            transform-origin: center !important;
-        }
-        .preset-dropdown-container {
-            display: flex;
-            gap: 5px;
-            margin-top: 5px;
-        }
-        .preset-dropdown {
-            flex-grow: 1;
-            background: rgba(16, 16, 20, 0.75);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            color: white;
-            border-radius: 0.4rem;
-            padding: 5px;
-            cursor: pointer;
-        }
-        .preset-dropdown option {
-            background: rgb(31, 31, 35);
-        }
-        .save-preset-btn {
-            background-color: var(--color-background-button-primary-default);
-            color: white;
-            border: none;
-            border-radius: 0.4rem;
-            padding: 5px 10px;
-            cursor: pointer;
-        }
-        .save-preset-btn:hover {
-            background-color: var(--color-background-button-primary-hover);
-        }
-        .delete-preset-btn {
-            background-color: var(--color-background-button-primary-default);
-            color: white;
-            border: none;
-            border-radius: 0.4rem;
-            padding: 5px 10px;
-            cursor: pointer;
-        }
-        .delete-preset-btn:hover {
-            background-color: var(--color-background-button-primary-hover);
-        }
-        .preset-modal {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: rgb(31, 31, 35);
-            padding: 15px;
-            border-radius: 0.4rem;
-            z-index: 10000;
-            display: none;
-            flex-direction: column;
-            gap: 10px;
-            width: 250px;
-        }
-        .preset-modal.visible {
-            display: flex;
-        }
-        .preset-modal-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .preset-modal-title {
-            font-weight: bold;
-        }
-        .preset-modal-close {
-            background: transparent;
-            color: white;
-            border: none;
-            font-size: 17px;
-            cursor: pointer;
-        }
-        .preset-modal-input {
-            background: rgba(16, 16, 20, 0.75);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            color: white;
-            border-radius: 0.4rem;
-            padding: 8px;
-        }
-        .preset-modal-buttons {
-            display: flex;
-            gap: 5px;
-            justify-content: flex-end;
-        }
-        .preset-modal-btn {
-            padding: 5px 10px;
-            border-radius: 0.4rem;
-            cursor: pointer;
-            border: none;
-        }
-        .preset-modal-confirm {
-            background-color: var(--color-background-button-primary-default);
-            color: white;
-        }
-        .preset-modal-confirm:hover {
-            background-color: var(--color-background-button-primary-hover);
-        }
-        .preset-modal-cancel {
-            background-color: transparent;
-            color: white;
-            border: 1px solid rgba(255, 255, 255, 0.1) !important;
-        }
+.custom-controls-container {
+  position: absolute;
+  bottom: 90px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background: rgb(31, 31, 35);
+  filter: drop-shadow(1px 1px 0.5px #000);
+  padding: 10px;
+  border-radius: 0.4rem;
+  transition: opacity 0.2s ease;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 9999;
+}
+.custom-controls-container.visible {
+  opacity: 1;
+  pointer-events: all;
+}
+.custom-controls-container.visible:not(:hover) {
+  opacity: 0.3;
+}
+.zoom-controls,
+.move-controls {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+.custom-btn {
+  background-color: var(--color-background-button-primary-default);
+  color: white;
+  border: none;
+  border-radius: 0.4rem;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 14px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.custom-btn:hover {
+  background-color: var(--color-background-button-primary-hover);
+}
+.move-up,
+.move-down {
+  margin: 0 auto;
+}
+.close-btn {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  background: transparent;
+  color: white;
+  border: none;
+  font-size: 17px;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  width: 17px;
+  height: 17px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.close-btn:hover {
+  background-color: rgba(83, 83, 95, 0.48);
+}
+.show-controls-btn {
+  position: absolute;
+  bottom: 90px;
+  right: 20px;
+  background-color: var(--color-background-button-primary-default);
+  color: white;
+  border: none;
+  border-radius: 0.4rem;
+  padding: 5px 10px;
+  cursor: pointer;
+  opacity: 0;
+  font-size: 12px;
+  font-weight: var(--font-weight-semibold);
+  filter: drop-shadow(1px 1px 0.5px #000);
+  transition: opacity 0.2s ease;
+  z-index: 9998;
+}
+.show-controls-btn:hover {
+  background-color: var(--color-background-button-primary-hover);
+}
+.video-player:hover .show-controls-btn {
+  opacity: 1;
+}
+.video-player video {
+  transition: transform 0.3s ease !important;
+  transform-origin: center !important;
+}
+.preset-dropdown-container {
+  display: flex;
+  gap: 5px;
+  margin-top: 5px;
+}
+.preset-dropdown {
+  flex-grow: 1;
+  background: rgba(16, 16, 20, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: white;
+  border-radius: 0.4rem;
+  padding: 5px;
+  cursor: pointer;
+}
+.preset-dropdown option {
+  background: rgb(31, 31, 35);
+}
+.save-preset-btn {
+  background-color: var(--color-background-button-primary-default);
+  color: white;
+  border: none;
+  border-radius: 0.4rem;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+.save-preset-btn:hover {
+  background-color: var(--color-background-button-primary-hover);
+}
+.delete-preset-btn {
+  background-color: var(--color-background-button-primary-default);
+  color: white;
+  border: none;
+  border-radius: 0.4rem;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+.delete-preset-btn:hover {
+  background-color: var(--color-background-button-primary-hover);
+}
+.preset-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgb(31, 31, 35);
+  padding: 15px;
+  border-radius: 0.4rem;
+  z-index: 10000;
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  width: 250px;
+}
+.preset-modal.visible {
+  display: flex;
+}
+.preset-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.preset-modal-title {
+  font-weight: bold;
+}
+.preset-modal-close {
+  background: transparent;
+  color: white;
+  border: none;
+  font-size: 17px;
+  cursor: pointer;
+}
+.preset-modal-input {
+  background: rgba(16, 16, 20, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: white;
+  border-radius: 0.4rem;
+  padding: 8px;
+}
+.preset-modal-buttons {
+  display: flex;
+  gap: 5px;
+  justify-content: flex-end;
+}
+.preset-modal-btn {
+  padding: 5px 10px;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  border: none;
+}
+.preset-modal-confirm {
+  background-color: var(--color-background-button-primary-default);
+  color: white;
+}
+.preset-modal-confirm:hover {
+  background-color: var(--color-background-button-primary-hover);
+}
+.preset-modal-cancel {
+  background-color: transparent;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
 /* Modal positioning styles */
 .preset-modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 10000;
-    display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 10000;
+  display: none;
 }
 
 .preset-modal-overlay.visible {
-    display: block;
+  display: block;
 }
 
 .preset-modal {
-    position: absolute;
-    background: rgb(31, 31, 35);
-    padding: 15px;
-    border-radius: 0.4rem;
-    z-index: 10001;
-    display: none;
-    flex-direction: column;
-    gap: 10px;
-    width: 250px;
+  position: absolute;
+  background: rgb(31, 31, 35);
+  padding: 15px;
+  border-radius: 0.4rem;
+  z-index: 10001;
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  width: 250px;
 }
 
 .preset-modal.visible {
-    display: flex;
+  display: flex;
 }
