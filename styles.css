@@ -193,16 +193,34 @@
             color: white;
             border: 1px solid rgba(255, 255, 255, 0.1) !important;
         }
-        .preset-modal-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.5);
-            z-index: 9999;
-            display: none;
-        }
-        .preset-modal-overlay.visible {
-            display: block;
-        }
+/* Modal positioning styles */
+.preset-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 10000;
+    display: none;
+}
+
+.preset-modal-overlay.visible {
+    display: block;
+}
+
+.preset-modal {
+    position: absolute;
+    background: rgb(31, 31, 35);
+    padding: 15px;
+    border-radius: 0.4rem;
+    z-index: 10001;
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    width: 250px;
+}
+
+.preset-modal.visible {
+    display: flex;
+}
