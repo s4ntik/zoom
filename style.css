@@ -144,3 +144,52 @@
     50% { box-shadow: 0 0 0 6px #9147ff; }
     100% { box-shadow: 0 0 0 2px white; }
 }
+
+/* Manage Button */
+.vod-manage-btn {
+    background: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 4px;
+    transition: background 0.2s;
+}
+
+.vod-manage-btn:hover {
+    background: rgba(255,255,255,0.1);
+}
+
+/* Navigation Controls */
+.vod-bookmark-nav {
+    padding: 0 10px;
+}
+
+.vod-bookmark-nav-btn {
+    background: #9147ff;
+    border: none;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.2s;
+}
+
+.vod-bookmark-nav-btn:hover {
+    background: #772ce8;
+}
+
+/* Compact Bookmark List */
+.vod-bookmark-manager li {
+    padding: 8px 10px;
+}
+
+.vod-bookmark-link {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 70%;
+    display: inline-block;
+    vertical-align: middle;
+}
